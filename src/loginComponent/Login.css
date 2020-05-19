@@ -1,0 +1,25 @@
+.login-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10% 0 0 25%;
+}
+.login-panel .login-field {
+    margin: 20px;
+    width: auto !important;
+}
+.login-head {
+    margin: 10px;
+}
+.btn-primary {
+    width: 95%;
+    margin-bottom: 20px;
+    display: inline;
+}
+.btn-primary a {
+    color: white;
+}

@@ -1,24 +1,60 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Login from './loginComponent/Login';
+import Workflows from './workflowsList/Workflows';
 
+function CreateWorlFlows() {
+  return <h2>Add nodes to the workflows</h2>;
+}
+function CustomeRoutes() {
+  return (
+    <Router>
+    {/* A <Switch> looks through its children <Route>s and
+        renders the first one that matches the current URL. */}
+      <Switch>
+      <Redirect exact from="/" to="login" />
+        <Route path="/workflowDetails">
+          <CreateWorlFlows />
+        </Route>
+        <Route path="/workflows">
+          <Workflows />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+      </Switch>
+  </Router>
+  )
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Welcome to the workflows
+      {/* import React, { Suspense } from 'react';
+
+        const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+        function MyComponent() {
+          return (
+            <div>
+              <Suspense fallback={<div>Loading...</div>}>
+                <OtherComponent />
+              </Suspense>
+            </div>
+          );
+        } */}
       </header>
+      <CustomeRoutes />
+    <footer className="App-footer">
+      Thanks for visiting
+    </footer>
     </div>
   );
 }
