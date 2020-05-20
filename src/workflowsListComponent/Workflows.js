@@ -27,7 +27,7 @@ function RenderWorkflows(props) {
         }
         return <WorkflowItem data={workflow} changeWorkflowStatus={changeWorkflowStatus}></WorkflowItem>
     })
-    : <p>Add your workflow with node details</p>
+    : <p className="info">Add your workflow with node details</p>
     )
 }
 export default function Workflows() {
@@ -51,11 +51,11 @@ export default function Workflows() {
     return [
     <div className="workflow-head">
         <div className="workflow-filter">
-            <a href="login" className="btn-head"><Button className="back-btn">Logout</Button></a>
+            <a href="/#/login" className="btn-head"><Button className="back-btn">Logout to clear the workflows</Button></a>
 
             <input type="search" className="search-input" placeholder="Search for the workflows by name" onChange={debounceSearchValue}></input>
         </div>
-        <a href="workflowDetails" className="btn-create"><Button className="button-create">+ Create Workflow</Button></a>
+        <a href="/#/workflowDetails" className="btn-create"><Button className="button-create">+ Create Workflow</Button></a>
     </div>,
     <div className="workflow-items">
         <RenderWorkflows searchName = {searchName}></RenderWorkflows>

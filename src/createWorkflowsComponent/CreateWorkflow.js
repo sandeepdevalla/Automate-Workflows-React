@@ -70,7 +70,7 @@ export default function CreateWorkflow() {
     }
     return [
     <div className="workflow-head">
-        <a href="workflows"><Button className="back-btn">Back</Button></a>
+        <a href="/#/workflows"><Button className="back-btn">Back</Button></a>
         <div>
             <input id ="name" onChange={saveWorkflowName} placeholder="Enter Name"></input>
         </div>

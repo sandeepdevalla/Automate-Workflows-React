@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Redirect
@@ -12,9 +13,7 @@ import CreateWorkflow from './createWorkflowsComponent/CreateWorkflow';
 
 function CustomeRoutes() {
   return (
-    <Router>
-    {/* A <Switch> looks through its children <Route>s and
-        renders the first one that matches the current URL. */}
+    <HashRouter basename='/'>
       <Switch>
       <Redirect exact from="/" to="login" />
         <Route path="/workflowDetails">
@@ -27,7 +26,7 @@ function CustomeRoutes() {
           <Login />
         </Route>
       </Switch>
-  </Router>
+  </HashRouter>
   )
 }
 function App() {
@@ -35,19 +34,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         Welcome to the workflows
-      {/* import React, { Suspense } from 'react';
-
-        const OtherComponent = React.lazy(() => import('./OtherComponent'));
-
-        function MyComponent() {
-          return (
-            <div>
-              <Suspense fallback={<div>Loading...</div>}>
-                <OtherComponent />
-              </Suspense>
-            </div>
-          );
-        } */}
       </header>
       <CustomeRoutes />
     <footer className="App-footer">
