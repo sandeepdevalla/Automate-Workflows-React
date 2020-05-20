@@ -1,0 +1,30 @@
+.node-panel {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid darkgrey;
+    margin: 20px;
+    width: 250px;
+    height: 380px;
+
+}
+.node-panel .node-title {
+    margin: 15px;
+    border: 1px solid black;
+
+}
+.node-panel .node-title .node-input {
+    width: 210px;
+    border: none;
+    outline: none;
+}
+.node-panel .node-content {
+    border: 1px solid black;
+    margin: 15px;
+    height: 300px;
+}
+.node-panel .node-content .node-content-input {
+    width: 210px;
+    height: 290px;
+    border: none;
+    outline: none;
+}

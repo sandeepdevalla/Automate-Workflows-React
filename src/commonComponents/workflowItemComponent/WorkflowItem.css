@@ -1,0 +1,30 @@
+.workflow-panel {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid darkgrey;
+    margin: 20px;
+    width: 250px;
+    height: 180px;
+
+}
+.workflow-panel .workflow-title {
+    margin: 15px;
+    border: 1px solid black;
+
+}
+.workflow-panel .workflow-content {
+    border: 1px solid black;
+    margin: 15px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.workflow-panel .workflow-content p {
+    width: 100%;
+}
+.workflow-panel .workflow-content span {
+    width: 28px;
+    height: 25px;
+    top: -7px;
+}

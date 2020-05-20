@@ -1,0 +1,60 @@
+.workflow-head {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+    margin: 15px;
+}
+.workflow-head div {
+    width: 60%;
+}
+.workflow-head div input {
+    float: left;
+    padding: 5px;
+    width: 300px;
+    border: 1px solid black;
+}
+.workflow-head .button-node{
+    width: auto;
+    background-color: green;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+}
+.workflow-head .button-node:hover{
+    background-color: green;
+}
+.btn-primary {
+    margin-bottom: 15px;
+}
+.back-btn {
+    margin-right: 15px;
+}
+.button-suffle {
+    background-color: indigo;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.delete {
+    background-color: red;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.nodes-layout {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 65vh;
+}
+.state-icon {
+    padding-left: 5px;
+    padding-top: 3px;
+    position: relative;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    background: lightgray;
+    border-radius: 40px;
+}
+.info {
+    width: 100%;
+}

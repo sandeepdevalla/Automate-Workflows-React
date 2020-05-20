@@ -15,11 +15,11 @@
 .login-head {
     margin: 10px;
 }
-.btn-primary {
+.btn-login {
     width: 95%;
     margin-bottom: 20px;
-    display: inline;
+    margin-left: 20px;
 }
-.btn-primary a {
+.btn-login a {
     color: white;
 }

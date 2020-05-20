@@ -1,27 +1,37 @@
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import {Button, InputGroup, FormControl} from 'react-bootstrap'
 
 import './Login.css';
 
-export default function     Login() {
+export default function Login() {
     const userDetails = {
         Username: '',
         Password: ''
     }
     const [loginDisable, setLoginDisable] = useState(true);
+    const [navigateToWorkflowsRoute, setNavigateToWorkflowsRoute] = useState(false);
     const [{Username, Password}, setUserDetails] = useState(userDetails);
     useEffect(()=>{
         if(Username && Password) {
             setLoginDisable(false);
+            localStorage.setItem('login',true);
         } else {
             setLoginDisable(true);
+            localStorage.setItem('login',false);
         }
     })
     const getUserDetails = (event) => {
         userDetails[event.target.id] = event.target.value;
         const {id, value} = event.target;
         setUserDetails(prevUser => ({...prevUser, [id]: value}))       
+    }
+    const navigateToWorkflows = () => {
+        setNavigateToWorkflowsRoute(true);
+    }
+    if (navigateToWorkflowsRoute === true) {
+        localStorage.setItem('workflows', JSON.stringify([]));
+        return <Redirect to='/workflows' />
     }
     return [
     <h2>Welcome to login page</h2>,
@@ -50,7 +60,7 @@ export default function     Login() {
             aria-describedby="basic-addon2"
         />
       </InputGroup>
-      <Link to="/workflows"><Button disabled = {loginDisable} key="login-btn" block>Login</Button></Link>
+      <Button className="btn-login" onClick={navigateToWorkflows} disabled = {loginDisable} key="login-btn" block>Login</Button>
     </div>
 ];
 }

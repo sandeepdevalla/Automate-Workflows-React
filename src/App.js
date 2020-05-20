@@ -7,11 +7,9 @@ import {
   Redirect
 } from "react-router-dom";
 import Login from './loginComponent/Login';
-import Workflows from './workflowsList/Workflows';
+import Workflows from './workflowsListComponent/Workflows';
+import CreateWorkflow from './createWorkflowsComponent/CreateWorkflow';
 
-function CreateWorlFlows() {
-  return <h2>Add nodes to the workflows</h2>;
-}
 function CustomeRoutes() {
   return (
     <Router>
@@ -20,7 +18,7 @@ function CustomeRoutes() {
       <Switch>
       <Redirect exact from="/" to="login" />
         <Route path="/workflowDetails">
-          <CreateWorlFlows />
+          <CreateWorkflow />
         </Route>
         <Route path="/workflows">
           <Workflows />

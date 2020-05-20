@@ -1,0 +1,37 @@
+.workflow-head {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+}
+.workflow-head a .button-create{
+    margin: 10px;
+    width: auto;
+    background-color: green;
+}
+.workflow-head a .button-create:hover{
+    background-color: green;
+}
+.workflow-head .workflow-filter {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.workflow-head .workflow-filter .search-input {
+    width: 50%;
+    border-radius: 20px;
+    outline: none;
+}
+.workflow-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 65vh;
+}
+.btn-head {
+    margin-top: 10px;
+}
+.btn-create {
+    margin-top : 20px;
+}
