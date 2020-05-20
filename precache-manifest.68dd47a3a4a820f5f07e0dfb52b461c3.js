@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ad23faf3f259837c5a430f0717f69bf",
+    "revision": "39891d268f3fe25b8dd8b65a00a353ce",
     "url": "/automate-workflows-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/automate-workflows-react/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "0f6ddc4b30b36c6d8ff1",
+    "revision": "ac17747f23849b186b2c",
     "url": "/automate-workflows-react/static/css/main.aecdaecf.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/automate-workflows-react/static/js/2.926db977.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f6ddc4b30b36c6d8ff1",
-    "url": "/automate-workflows-react/static/js/main.ccad2a10.chunk.js"
+    "revision": "ac17747f23849b186b2c",
+    "url": "/automate-workflows-react/static/js/main.10c02f1a.chunk.js"
   },
   {
     "revision": "d68c9f83a981306bc83d",
